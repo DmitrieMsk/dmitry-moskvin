@@ -11,7 +11,7 @@ const router = createBrowserRouter([
       { path: '/about', element: <AboutMe /> },
     ],
   },
-])
+], { basename: '/dmitry-moskvin' })
 
 export default function AppRouter() {
   return <RouterProvider router={router} />
