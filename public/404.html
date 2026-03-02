@@ -10,7 +10,17 @@
         var repo = '/dmitry-moskvin'
         if (l.pathname.startsWith(repo + '/')) {
           var path = l.pathname.slice(repo.length)
-          var newUrl = l.protocol + '//' + l.host + repo + '/?p=' + encodeURIComponent(path + l.search + l.hash)
+          if (!path.startsWith('/')) path = '/' + path
+          path = path.replace(/^\/+/, '/')
+          var newUrl =
+            l.protocol +
+            '//' +
+            l.host +
+            repo +
+            '/?p=' +
+            encodeURIComponent(path) +
+            (l.search ? '&q=' + encodeURIComponent(l.search.slice(1)) : '') +
+            (l.hash ? '&h=' + encodeURIComponent(l.hash.slice(1)) : '')
           l.replace(newUrl)
         }
       })()
