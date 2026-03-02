@@ -13,7 +13,6 @@ export default function AboutMe() {
           <div>Пол: Мужской</div>
           <div>Место обучения: ОмГУ имени Ф.М. Достоевского</div>
           <div>Номер группы: МММ-501-О-06</div>
-          <div>Школьное образование: г. Омск Гимназия №85</div>
         </div>
 
         <div style={{ flex: '0 0 auto' }}>
